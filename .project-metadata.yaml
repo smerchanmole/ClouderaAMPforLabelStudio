@@ -8,7 +8,7 @@ environment_variables:
   MY_SUBDOMAIN:
     description: "Unique subdomain for your Label Studio instance"
     default: "labelstudioCAI"
-    requiered: true
+    required: true
 
 runtimes:
   - editor: JupyterLab
@@ -18,7 +18,7 @@ runtimes:
 tasks:
   - type: start_application
     name: Label Studio App
-    subdomain: labelstudioCAI
+    subdomain: ${MY_SUBDOMAIN}
     script: launch.py
     kernel: python3
     short_summary: "Main Label Studio interface"
