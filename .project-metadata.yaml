@@ -8,6 +8,7 @@ environment_variables:
   MY_SUBDOMAIN:
     description: "Unique subdomain for your Label Studio instance"
     default: "labelstudioCAI"
+    requiered: true
 
 runtimes:
   - editor: JupyterLab
@@ -15,18 +16,11 @@ runtimes:
     edition: Standard
 
 tasks:
-  - type: run_session
-    name: Install Dependencies
-    script: launch.py
-    short_summary: "Initial setup of isolated venv"
-    kernel: Python 3.10
-    cpu: 2
-    memory: 4
-
   - type: start_application
     name: Label Studio App
-    subdomain: labelstudioCAI
+    subdomain: MY_SUBDOMAIN
     script: launch.py
+    kernel: python3
     short_summary: "Main Label Studio interface"
     long_summary: "Launch the Label Studio web interface on the assigned port."
     cpu: 4
