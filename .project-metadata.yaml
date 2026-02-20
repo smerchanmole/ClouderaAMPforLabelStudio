@@ -23,7 +23,7 @@ tasks:
     cpu: 2
     memory: 4
 
-  - type: create_application
+  - type: start_application
     name: Label Studio App
     subdomain: labelstudioCAI
     script: launch.py
