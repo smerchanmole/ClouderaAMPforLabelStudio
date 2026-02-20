@@ -43,7 +43,7 @@ Annotation is rarely a solo task. Label Studio allows for:
 
 > "Data is the new oil, but labeling is the refinery." Label Studio ensures your AI refinery operates at peak efficiency.
 ----
-#AMP info 
+# AMP info 
 
 ## 🚀 Overview
 
