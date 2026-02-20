@@ -23,11 +23,11 @@ tasks:
     cpu: 2
     memory: 4
 
-  - type: run_application
+  - type: create_application
     name: Label Studio App
     subdomain: labelstudio-dgsd
     script: launch.py
     short_summary: "Main Label Studio interface"
-    kernel: Python 3.10
+    long_summary: "Launch the Label Studio web interface on the assigned port."
     cpu: 4
     memory: 8
