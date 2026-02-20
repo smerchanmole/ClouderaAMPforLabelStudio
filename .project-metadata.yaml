@@ -1,13 +1,13 @@
 name: Label Studio Enterprise AMP
-description: "Professional image and text labeling tool. Automatically configures isolated venv, persistent storage, and secure networking for CML."
-author: "AI Engineering Team"
+description: "Professional image and text labeling tool. Isolated venv and secure networking for CML."
+author: "smerchanmole"
 specification_version: 1.0
 prototype_version: 1.0
 
 environment_variables:
   MY_SUBDOMAIN:
-    description: "Unique subdomain for your Label Studio instance (e.g., my-labeler)"
-    default: "labeler-default"
+    description: "Unique subdomain for your Label Studio instance"
+    default: "labelstudio-dgsd"
 
 runtimes:
   - editor: JupyterLab
@@ -18,14 +18,16 @@ tasks:
   - type: run_session
     name: Install Dependencies
     script: launch.py
-    short_summary: "Initial setup of isolated venv and Label Studio"
+    short_summary: "Initial setup of isolated venv"
     kernel: Python 3.10
     cpu: 2
     memory: 4
 
-  - type: create_application
+  - type: run_application
     name: Label Studio App
-    subdomain: labelstudio
+    subdomain: labelstudio-dgsd
     script: launch.py
+    short_summary: "Main Label Studio interface"
+    kernel: Python 3.10
     cpu: 4
     memory: 8
