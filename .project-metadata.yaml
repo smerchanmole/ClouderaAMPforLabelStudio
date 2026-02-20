@@ -7,7 +7,7 @@ prototype_version: 1.0
 environment_variables:
   MY_SUBDOMAIN:
     description: "Unique subdomain for your Label Studio instance"
-    default: "labelstudio-dgsd"
+    default: "labelstudioCAI"
 
 runtimes:
   - editor: JupyterLab
@@ -25,7 +25,7 @@ tasks:
 
   - type: create_application
     name: Label Studio App
-    subdomain: labelstudio-dgsd
+    subdomain: labelstudioCAI
     script: launch.py
     short_summary: "Main Label Studio interface"
     long_summary: "Launch the Label Studio web interface on the assigned port."
