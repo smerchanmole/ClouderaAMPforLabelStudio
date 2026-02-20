@@ -18,7 +18,7 @@ runtimes:
 tasks:
   - type: start_application
     name: Label Studio App
-    subdomain: MY_SUBDOMAIN
+    subdomain: labelstudioCAI
     script: launch.py
     kernel: python3
     short_summary: "Main Label Studio interface"
